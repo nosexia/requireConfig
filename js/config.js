@@ -1,5 +1,6 @@
 var require = {
     baseUrl: 'js',
+    urlArgs: 'v=111',
     paths:{
         jquery: 'lib/jquery',
         backbone: 'lib/backbone',
@@ -17,4 +18,4 @@ var require = {
     }        
 };
 
-//引入angular的方式,angular是cmd模式，需要用到exports输出
+//urlArgs参数 给文件加版本号
