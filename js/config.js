@@ -1,3 +1,4 @@
+var _params;
 var require = {
     baseUrl: 'js',
     urlArgs: 'v=111',
@@ -15,7 +16,11 @@ var require = {
         angular:{
             exports: 'angular'
         }
+    },
+    config: {
+        'common/params': _params || {}
     }        
 };
 
-//urlArgs参数 给文件加版本号
+//定义_params;
+//config: {'common/params': _params || {} }

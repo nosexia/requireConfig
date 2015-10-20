@@ -1,8 +1,9 @@
 require([
     'backbone',
     'jquery.dragsort',
-    'angular'
-],function(backbone, jqueryDragsort, angular){
-    console.log(angular);
+    'angular',
+    'common/params'
+],function(backbone, jqueryDragsort, angular, params){
+    console.log(params);
 });
 
