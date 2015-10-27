@@ -12,10 +12,10 @@ var require = {
     //加载backbone需要依赖['jquery', 'underscore']
     shim:{
         backbone: ['jquery', 'underscore'],
-        'jquery.dragsort': ['jquery'],
+        'jquery.dragsort': ['jquery']/*,
         angular:{
             exports: 'angular'
-        }
+        }*/
     },
     config: {
         'common/params': _params || {}
