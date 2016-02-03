@@ -2,24 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DomReady ->domReady!</title>
+    <title></title>
     
     
 </head>
 
-<script type="text/javascript">
-    var _params = {
-        name: 'nose'
-    };
-</script>
 <script type="text/javascript" src="js/config.js"></script>
-<script src="js/require.js" data-main="indexMain"></script>  
-<script type="text/javascript" src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_f2fb5194.js"></script>
+<script src="js/require.js" data-main="indexMain"></script>
 <body>
-    <div id='div1'></div>
 
-'使用loader插件语法'（domReady依赖'!'），使得require回调函数等待dom加载完成执行
-domReady返回当前的document,使用加载插件'!'
+	<h3>cmd载入模块两种方式</h3>
+    <p>
+    	1.依赖前置</br>   
+    	define([module],function(module){});
+	</p>
+
+	<p>
+    	2.依赖就近</br>   
+    	define(function(require, module, exports){
+    		var a = require('./a');
+    		a.get(str);
+    	})
+    </p>
+
 </body>
 
 

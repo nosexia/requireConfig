@@ -1,9 +1,8 @@
 require([
-    'common/domReady!'
-],function(domReady){
-    //相当于document.ready方法
-    console.log(domReady)       //document
+	'require',
+    'ui/ui3'
+],function(require, ui3){
+    console.log(ui3);    		//{name: nose} 
+   	var ui3_copy = require('./ui/ui3');
+   	console.log(ui3_copy === ui3);  
 });
-
-//1.可以让回调函数在document加载后加载
-//2.返回值是当前document对象
