@@ -2,29 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>jquery定义采用命名模块，调用时，必须和命名模块名称一致</title>
     
     
 </head>
-
 <script type="text/javascript" src="js/config.js"></script>
 <script src="js/require.js" data-main="indexMain"></script>
 <body>
-
-	<h3>cmd载入模块两种方式</h3>
-    <p>
-    	1.依赖前置</br>   
-    	define([module],function(module){});
-	</p>
-
-	<p>
-    	2.依赖就近</br>   
-    	define(function(require, module, exports){
-    		var a = require('./a');
-    		a.get(str);
-    	})
-    </p>
-
+// 给amd模块命名是更加安全的。命名后的amd，引入模块也需要同名。</br>
+/A named AMD is safest and most robust way to register</br>
+在jquery源码中有命名</br>
+define('jquery', [], function(){ return jQuery })</br>
+在引用jquery模块时，必须和之前命名的模块一样。
+require('jquery', function($){ console.log($) })
 </body>
 
 
